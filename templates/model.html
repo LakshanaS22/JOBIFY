@@ -1,0 +1,62 @@
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Get a JOB</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles.css') }}">    
+</head>
+<body>
+    <header>
+        	<style>
+.page th {
+  
+    background-color: #adc5e6;
+    color: white;
+;
+}
+
+</style>
+<div class="wrapper">
+        
+<ul class="nav-area">
+<li><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="#">Portfolio</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</div>
+    
+<div class="welcome-text">
+        <h1> Upload your <span> Resume</span></h1>
+
+	<body>
+
+	<form method="POST" action="/submit" enctype="multipart/form-data">
+	
+	<input type="file" name="userfile">
+	<input type="submit">
+	</form>
+
+
+        <br>
+          <br>
+        <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+	<div class=page>
+ 		<h1><span>Suggested jobs</span></h1>
+  		{% for table in tables %}
+    	
+    	{{ table|safe }}
+  		{% endfor %}
+	</div>
+    
+    </body>
+</html>
